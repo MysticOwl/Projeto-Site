@@ -1,0 +1,28 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: darkorange;
+}
+.simbolo{
+    background-color: chartreuse;
+    width: fit-content;
+    height: fit-content;
+}
+.entrada{
+    background-color: blue;
+    width: fit-content;
+    height: fit-content;
+}
+.saida{
+    background-color: yellow;
+    width: fit-content;
+    height: fit-content;
+}
+.footer{
+    background-color: crimson;
+    width: fit-content;
+    height: fit-content;
+}
