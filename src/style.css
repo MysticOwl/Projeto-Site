@@ -1,25 +1,47 @@
 .main{
-    width: 100vw;
-    height: 100vh;
+    margin: 0.3%;
+    width: 98vw;
+    height: 98vh;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     background-color: darkorange;
 }
 .simbolo{
+    margin: 0.5%;
     background-color: chartreuse;
-    width: fit-content;
-    height: fit-content;
+    width: 20%;
+    height: 98%;
+}
+.simboloArea{
+    padding: 1%;
+    margin: 2%;
+    height: 93%;
+    background-color: whitesmoke;
 }
 .entrada{
+    margin: 0.5%;
     background-color: blue;
-    width: fit-content;
-    height: fit-content;
+    width: 40%;
+    height: 98%;
+}
+.entradaArea{
+    padding: 1%;
+    margin: 2%;
+    height: 93%;
+    background-color: whitesmoke;
 }
 .saida{
+    margin: 0.5%;
     background-color: yellow;
-    width: fit-content;
-    height: fit-content;
+    width: 40%;
+    height: 98%;
+}
+.saidaArea{
+    padding: 1%;
+    margin: 2%;
+    height: 93%;
+    background-color: whitesmoke;
 }
 .footer{
     background-color: crimson;
