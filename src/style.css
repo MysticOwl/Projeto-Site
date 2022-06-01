@@ -112,3 +112,31 @@
 .textoCondition{
     transform: rotate(-45deg);
 }
+
+/*Estilo entrada Fluxograma*/
+
+.montagemFluxograma{
+    margin-top: 2%;
+    padding: 1%;
+    align-items: center;
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    row-gap: 60px;
+}
+
+.inicioFluxograma{
+    width: 150px;
+    height: 75px;
+    border-radius: 100px/50px;
+    border: 2px solid;
+    position: relative;
+}
+
+.fimFluxograma{
+    width: 150px;
+    height: 75px;
+    border-radius: 100px/50px;
+    border: 2px solid;
+    position: relative;
+}
