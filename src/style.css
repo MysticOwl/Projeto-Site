@@ -1,3 +1,4 @@
+/*Colunas da interface*/
 .main{
     margin: 0.3%;
     width: 98vw;
@@ -14,22 +15,14 @@
     height: 98%;
 }
 .simboloArea{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
     padding: 1%;
     margin: 2%;
     height: 93%;
     border: 1px solid black;
     background-color: whitesmoke;
-}
-
-.condicao{
-    display: grid;
-    margin-left: 10%;
-    margin-top: 2%;
-    width: 100px;
-    height: 70px;
-    border-radius: 5px;
-    border: 2px solid;
-    border-color: black;
 }
 
 .entrada{
@@ -62,4 +55,60 @@
     background-color: crimson;
     width: fit-content;
     height: fit-content;
+}
+/*Formas fluxograma*/
+
+.simbolVar{
+    margin-top: 2%;
+    width: 100px;
+    height: 70px;
+    border-radius: 5px;
+    border: 2px solid;
+    border-color: black;
+    background-color: whitesmoke;
+}
+
+.simbolInput{
+    width: 100px;
+    height: 50px;
+    transform: skew(20deg);
+    background-color: whitesmoke;
+    margin-top: 2%;
+    border: 2px solid;
+    border-color: black;
+}
+.textoInput{
+    transform: skew(-20deg);
+}
+
+.simbolOutput{
+    width: 100px;
+    height: 50px;
+    transform: skew(-20deg);
+    background-color: whitesmoke;
+    margin-top: 2%;
+    border: 2px solid;
+    border-color: black;
+}
+.textoOutput{
+    transform: skew(20deg);
+}
+
+.simbolCondition{
+    background-color: whitesmoke;
+    width: 80px;
+    height: 80px;
+    margin-top: 6%;
+    writing-mode: vertical-lr;
+    /*Rotação para losangolo*/
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    /*Borda*/
+    border: 2px solid;
+    border-color: black;
+}
+.textoCondition{
+    transform: rotate(-45deg);
 }
