@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Pojeto SI-II</title>
+    <head><title>Pojeto SI-II</title>
         <link rel="stylesheet" href="./src/style.css">
     </head>
     <body>
@@ -9,14 +8,15 @@
             <div class="simbolo">
                 <div class="simboloArea">
                     <div id="fluxogramaVariavel">
-                        <img src="/src/img/variável.svg" alt="Simbolo para entreda de variável">
+                        <img id="variavel" draggable="true" src="/src/img/variável.svg" alt="Simbolo para entreda de variável" ondragstart="dragThis(event)">
+                        <img id="input" draggable="true" src="/src/img/variável.svg" alt="Simbolo para entreda de variável" ondragstart="dragThis(event)">
                     </div>
                 </div>
             </div>
             <div class="entrada">
                 <div class="entradaArea">
-                    <div class="montagemFluxograma">
-                        
+                    <div id="entradaFluxograma" class="montagemFluxograma" ondrop="dropThis(event)" ondragover="allowDropThis(event)">
+                        <div class="step"></div>                        
                     </div>
                 </div>
             </div>
@@ -24,5 +24,10 @@
                 <div class="saidaArea"></div>
             </div>
         </div>
+    <footer>
+    <!-- Inicio Scripts -->
+    <script src="src/script/drag-and-drop.js"></script>
+    <!-- Final Scripts-->
+    </footer>
     </body>
 </html>

@@ -125,18 +125,11 @@
     row-gap: 60px;
 }
 
-.inicioFluxograma{
-    width: 150px;
-    height: 75px;
-    border-radius: 100px/50px;
-    border: 2px solid;
-    position: relative;
-}
-
-.fimFluxograma{
-    width: 150px;
-    height: 75px;
-    border-radius: 100px/50px;
-    border: 2px solid;
-    position: relative;
+.step{
+    padding: 5px;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 200px;
+    max-height: 200px;
+    border: 1px solid black;
 }
