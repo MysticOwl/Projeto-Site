@@ -1,40 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Pojeto SI-II</title>
+    <head><title>Pojeto SI-II</title>
         <link rel="stylesheet" href="./src/style.css">
     </head>
     <body>
         <div class="main">
             <div class="simbolo">
                 <div class="simboloArea">
-                    <button class="simbolVar">
-                        Variável                        
-                    </button>
-                    <button class="simbolInput">
-                        <p class="textoInput">Input</p>                       
-                    </button>
-                    <button class="simbolOutput">
-                        <p class="textoOutput">Output</p>                        
-                    </button>
-                    <button class="simbolCondition">
-                        <p class="textoCondition">Condição</p>                       
-                    </button>
+                    <div id="fluxogramaVariavel">
+                        <img id="variavel" draggable="true" src="/src/img/variavel.svg" alt="Simbolo para entreda de variável" ondragstart="dragThis(event)">
+                    </div>
                 </div>
             </div>
             <div class="entrada">
                 <div class="entradaArea">
                     <div class="montagemFluxograma">
-                        <li>
-                            <div class="inicioFluxograma"><p></p></div>
-                        </li>
-                        <li>
-                            <div class="simbolCondition"><p></p></div>                       
-                        </button>
-                        </li>
-                        <li>
-                            <div class="fimFluxograma"><p></p></div>
-                        </li>
+                        <div id="passo" class="step" ondrop="dropThis(event)" ondragover="allowDropThis(event)"></div>
+                        <div id="passo1" class="step" ondrop="dropThis(event)" ondragover="allowDropThis(event)"></div>
                     </div>
                 </div>
             </div>
@@ -42,5 +24,10 @@
                 <div class="saidaArea"></div>
             </div>
         </div>
+    <footer>
+    <!-- Inicio Scripts -->
+    <script src="src/script/drag-and-drop.js"></script>
+    <!-- Final Scripts-->
+    </footer>
     </body>
 </html>

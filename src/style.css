@@ -12,7 +12,7 @@
     margin: 0.5%;
     /*background-color: chartreuse;*/
     width: 20%;
-    height: 98%;
+    height: 93%;
 }
 .simboloArea{
     display:flex;
@@ -125,18 +125,35 @@
     row-gap: 60px;
 }
 
-.inicioFluxograma{
-    width: 150px;
-    height: 75px;
-    border-radius: 100px/50px;
-    border: 2px solid;
-    position: relative;
+.step{
+    padding: 5px;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 200px;
+    max-height: 200px;
+    border: 1px solid black;
 }
 
-.fimFluxograma{
-    width: 150px;
-    height: 75px;
-    border-radius: 100px/50px;
-    border: 2px solid;
-    position: relative;
+.addButton{
+    width: 20px;
+    height: 7px;
+    border-radius: 5%;
+    background-color: greenyellow;
+    border: 1px solid green;
+    transition-duration: 0.4s;
+}
+.addButton:hover{
+    background-color: green;
+}
+.removeButton{
+    width: 20px;
+    height: 7px;
+    border-radius: 5%;
+    background-color: red;
+    border: 1px solid darkred;
+    margin-left: 3px;
+    transition-duration: 0.4s;
+}
+.removeButton:hover{
+    background-color: darkred;
 }
