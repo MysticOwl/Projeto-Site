@@ -133,3 +133,27 @@
     max-height: 200px;
     border: 1px solid black;
 }
+
+.addButton{
+    width: 20px;
+    height: 7px;
+    border-radius: 5%;
+    background-color: greenyellow;
+    border: 1px solid green;
+    transition-duration: 0.4s;
+}
+.addButton:hover{
+    background-color: green;
+}
+.removeButton{
+    width: 20px;
+    height: 7px;
+    border-radius: 5%;
+    background-color: red;
+    border: 1px solid darkred;
+    margin-left: 3px;
+    transition-duration: 0.4s;
+}
+.removeButton:hover{
+    background-color: darkred;
+}
