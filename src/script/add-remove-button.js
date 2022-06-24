@@ -6,10 +6,10 @@ function creatNextStep(){
     divStep.innerHTML += `<div id=${cont_steps} class="step borderOn" ondrop="dropThis(event)" ondragover="allowDropThis(event)"></div>`
 }
 
-function removeThisStep(step_id){
+function removeThisStep(step_id, numberStep){
     var thisStep = document.getElementById(step_id.id)
     thisStep.remove()
-    var step = document.getElementById(`${cont_steps}`)
+    var step = document.getElementById(`${numberStep}`)
     step.classList.add("borderOn")
 }
 

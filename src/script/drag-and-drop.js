@@ -24,7 +24,7 @@ function dropThis(i){
     var classChange = document.getElementById(step_id)
     classChange.className = "step"
 
-    step.innerHTML = `<div id="${imagen_id}_passo_${step_id}"><img src="${imagen_src}"> <div class="footerButton"><button id="remove_button_${step_id}" class="removeButton" onclick="removeThisStep(${imagen_id}_passo_${step_id})"></button></div></div>`
+    step.innerHTML = `<div id="${imagen_id}_passo_${step_id}"><img src="${imagen_src}"> <div class="footerButton"><button id="remove_button_${step_id}" class="removeButton" onclick="removeThisStep(${imagen_id}_passo_${step_id}, ${step_id})"></button></div></div>`
 
     
 }

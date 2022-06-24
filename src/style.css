@@ -58,6 +58,7 @@
 }
 /*Estilo entrada Fluxograma*/
 
+
 .montagemFluxograma{
     margin-top: 2%;
     padding: 1%;
@@ -78,6 +79,10 @@
     min-height: 100px;
     max-width: 200px;
     max-height: 200px;
+}
+
+.buttons{
+    position: fixed;
 }
 
 .addButton{
