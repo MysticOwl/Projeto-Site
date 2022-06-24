@@ -14,9 +14,9 @@
             </div>
             <div class="entrada">
                 <div class="entradaArea">
-                    <div class="montagemFluxograma">
-                        <div id="passo" class="step" ondrop="dropThis(event)" ondragover="allowDropThis(event)"></div>
-                        <div id="passo1" class="step" ondrop="dropThis(event)" ondragover="allowDropThis(event)"></div>
+                <button id="add_button_${i.target.id}" class="addButton" onclick="creatNextStep()"></button>
+                    <div id="montagemFluxograma" class="montagemFluxograma">
+                            <div id="1" class="step" ondrop="dropThis(event)" ondragover="allowDropThis(event)"></div>
                     </div>
                 </div>
             </div>
@@ -27,6 +27,7 @@
     <footer>
     <!-- Inicio Scripts -->
     <script src="src/script/drag-and-drop.js"></script>
+    <script src="src/script/add-remove-button.js"></script>
     <!-- Final Scripts-->
     </footer>
     </body>
