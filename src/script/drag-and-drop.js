@@ -20,7 +20,7 @@ function dropThis(i){
     // variavel que coleta o id do alvo
     var step = document.getElementById(i.target.id);    
     var step_id = step.id         
-    console.log(typeof(step_id))
+    console.log(step_id)
 
     // constante que seleciona a class do alvo   
     // função para tirar as bordas do alvo

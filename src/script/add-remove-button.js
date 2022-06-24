@@ -7,9 +7,6 @@ function creatNextStep(){
 }
 
 function removeThisStep(step_id){
-    console.log(step_id)
     var thisStep = document.getElementById(step_id)
     thisStep.remove()
-    steps --
-    console.log(steps)
 }
