@@ -6,8 +6,9 @@ function creatNextStep(){
     <div id=${steps} class="step" ondrop="dropThis(event)" ondragover="allowDropThis(event)"></div>`
 }
 
-function removeThisStep(){
-    var thisStep = document.getElementById(`${steps}`)
+function removeThisStep(step_id){
+    console.log(step_id)
+    var thisStep = document.getElementById(step_id)
     thisStep.remove()
     steps --
     console.log(steps)

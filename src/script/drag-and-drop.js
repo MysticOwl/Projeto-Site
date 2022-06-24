@@ -18,9 +18,9 @@ function dropThis(i){
     var imagen_src = document.getElementById(imagen_id).src;
     
     // variavel que coleta o id do alvo
-    var step = document.getElementById(i.target.id);             
-    
-    console.log(step)
+    var step = document.getElementById(i.target.id);    
+    var step_id = step.id         
+    console.log(typeof(step_id))
 
     // constante que seleciona a class do alvo   
     // função para tirar as bordas do alvo
@@ -28,5 +28,5 @@ function dropThis(i){
     // função para inserir o id e classe no alvo selecionado
     //document.getElementById(i.target.id).setAttribute
     //("id",`${fluxograma_passo}`)
-    step.innerHTML = `<img src="${imagen_src}"> <div class="footerButton"><button id="remove_button_${i.target.id}" class="removeButton" onclick="removeThisStep()"></button></div>`
+    step.innerHTML = `<img src="${imagen_src}"> <div class="footerButton"><button id="remove_button_${step_id}" class="removeButton" onclick="removeThisStep(${step_id})"></button></div>`
 }
