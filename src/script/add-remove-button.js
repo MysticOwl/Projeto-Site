@@ -1,9 +1,9 @@
-var cont_steps = 1
+var cont_steps = 0
 
 function creatNextStep(){
     cont_steps++
     var divStep = document.getElementById("montagemFluxograma");
-    divStep.innerHTML += `<div id=${cont_steps} class="step" ondrop="dropThis(event)" ondragover="allowDropThis(event)"></div>`
+    divStep.innerHTML += `<div id=${cont_steps} class="step borderOn" ondrop="dropThis(event)" ondragover="allowDropThis(event)"></div>`
 }
 
 function removeThisStep(step_id){
