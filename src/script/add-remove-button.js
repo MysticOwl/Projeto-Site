@@ -9,6 +9,8 @@ function creatNextStep(){
 function removeThisStep(step_id){
     var thisStep = document.getElementById(step_id.id)
     thisStep.remove()
+    var step = document.getElementById(`${cont_steps}`)
+    step.classList.add("borderOn")
 }
 
 function removeLastStep(){
