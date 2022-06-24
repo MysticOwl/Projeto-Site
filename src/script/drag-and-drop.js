@@ -5,12 +5,12 @@ function allowDropThis(i){
 //Coleta todas as informações do item selecionado, com o parametro 'id'
 function dragThis(i){
     // coleta o id do target
-    i.dataTransfer.setData("item_drag", i.target.id);
+    i.dataTransfer.setData("item_drag", i.target.id)
 }
 //Função para alterar quando realiza o drop
 function dropThis(i){
     i.preventDefault();
-    
+
     // variavel para setar o id do intem segurado
     var imagen_id = i.dataTransfer.getData("item_drag");                
     
@@ -21,8 +21,10 @@ function dropThis(i){
     var step = document.getElementById(i.target.id);    
     var step_id = step.id
 
-    step.innerHTML = `<div id="passo_${step_id}"><img src="${imagen_src}"> <div class="footerButton"><button id="remove_button_${step_id}" class="removeButton" onclick="removeThisStep(passo_${step_id})"></button></div></div>`
+    var classChange = document.getElementById(step_id)
+    classChange.className = "step"
+
+    step.innerHTML = `<div id="${imagen_id}_passo_${step_id}"><img src="${imagen_src}"> <div class="footerButton"><button id="remove_button_${step_id}" class="removeButton" onclick="removeThisStep(passo_${step_id})"></button></div></div><style>.step:before {border: none;};</style>`
 
     
-    console.log(step_id)
 }
