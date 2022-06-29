@@ -128,3 +128,76 @@
     -ms-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
 }
+
+/*raphael últimas alterações*/
+body {
+    background-color: #bce7f7;
+}
+
+nav{
+    background-image:
+        linear-gradient(to right, #58caf3, #0e6889);
+    position: absolute;
+    right: 0%;
+    left: 0%;
+    top: 0%;
+}
+
+nav ul li{
+   position: relative;
+   display: inline;
+}
+
+nav ul li a{
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    background-color: #96d4eb;
+}
+
+nav ul ul{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 18px;
+}
+
+nav ul ul li a{
+    display: block;
+}
+
+nav ul li:hover ul{
+    display: inline-block;
+}
+
+header{
+    margin-left: 10%;
+    display: inline-block;
+}
+
+.forms{
+    position: absolute;
+    width: 1000px;
+    background-image:
+        linear-gradient(to right, #58caf3, #0e6889);
+    text-align: justify;
+    top: 400px;
+    left: 160px;
+    border-radius: 0.6rem;
+}
+
+.paragrafo{
+    color:black;
+    margin: 10px;
+    text-indent: 50px;
+    margin-left: 30px;
+    margin-right: 35px;
+}
+
+.capa{
+    position: relative;
+    top: 4em;   
+}

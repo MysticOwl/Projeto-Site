@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pojeto SI-II</title>
+        <link rel="stylesheet" href="./src/style.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="">Base de Conhecimento</a>
+                    <ul>
+                        <li><a href="https://wiki.python.org/moin/BeginnersGuide" target="_blank"><img src="./src/python.png" alt="python icon"> Python</a></li>
+                        <li><a href="https://dev.java/learn/getting-started-with-java/" target="_blank"><img src="./src/java.png" alt="java icon"> Java</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Conversor</a>
+                        <ul>
+                            <li><a href="python.html"><img src="./src/python.png" alt="python icon"> Python</a></li>
+                            <li><a href="java.html"><img src="./src/java.png" alt="java icon"> Java</a></li>
+                        </ul>
+                </li>
+                                    
+                <li><a href="">Sobre</a></li>
+                <li><a href="">Contatos</a></li>
+                <li><a href="register.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="capa">
+            <img src="./src/logo.png">
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <hr>
+
+        <header>
+            <h2>
+               Bem vindo a área de cadastro
+            </h2>
+        </header>
+        <section class="forms">
+
+                <form class="paragrafo" name="cadastro" method="get" action="index.html">
+                    <h2>Cadastro</h2>
+                    Nome completo: <input type="text" id="name" name="name" placeholder="Digite seu nome completo" size="40">
+                    <br>
+                    Email: <input type="text" id="email" name="email" placeholder="Digite seu e-mail" size="40">
+                    <br>
+                    Senha: <input type="password" id="password" name="password" placeholder="*****" size="40">
+                    <br>
+                    Sexo:<input type="radio" name="sexo"  value="masculino">Masculino
+                    <input type="radio" name="sexo" value="feminino">Feminino
+                    <input type="radio" name="sexo" value="outro">Outro
+                    <br>
+                    <textarea id="sugestion" name="cv" rows="5" cols="50" placeholder="Quer deixar uma sugestão para melhorar o site?"></textarea><br>
+                    <input type="submit" id="send" value="Enviar">
+                </form>
+        
+        </section>
+        <script src="./src/script/objeto.js"></script>
+
+</body>
+</html>
+        

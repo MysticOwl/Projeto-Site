@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pojeto SI-II</title>
+        <link rel="stylesheet" href="./src/style.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="">Base de Conhecimento</a>
+                    <ul>
+                        <li><a href="https://wiki.python.org/moin/BeginnersGuide" target="_blank"><img src="./src/python.png" alt="python icon"> Python</a></li>
+                        <li><a href="https://dev.java/learn/getting-started-with-java/" target="_blank"><img src="./src/java.png" alt="java icon"> Java</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Conversor</a>
+                        <ul>
+                            <li><a href="python.html"><img src="./src/python.png" alt="python icon"> Python</a></li>
+                            <li><a href="java.html"><img src="./src/java.png" alt="java icon"> Java</a></li>
+                        </ul>
+                </li>
+                                    
+                <li><a href="">Sobre</a></li>
+                <li><a href="">Contatos</a></li>
+                <li><a href="register.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="capa">
+            <img src="./src/logo.png">
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <hr>
+
+        <div class="main">
+            <div class="simbolo">
+                <div class="simboloArea">
+                        <img id="variavel" draggable="true" src="./src/img/variavel.svg" alt="Simbolo para entrada de variável" ondragstart="dragThis(event)">
+
+                        <img id="input" draggable="true" src="./src/img/input.svg" alt="Simbolo para Input de str" ondragstart="dragThis(event)">
+
+                        <img id="output" draggable="true" src="./src/img/output.svg" alt="Simbolo para saida de str" ondragstart="dragThis(event)">
+
+                        <img id="loop" draggable="true" src="./src/img/loop.svg" alt="Simbolo para ação de loop" ondragstart="dragThis(event)">
+
+                        <img id="condition" draggable="true" src="./src/img/condition.svg" alt="Simbolo para condição" ondragstart="dragThis(event)">
+                </div>
+            </div>
+            <div class="entrada">
+                <div class="entradaArea">
+                    <div class="buttons">
+                        <button id="add_step_button" class="addButton" onclick="creatNextStep()"></button>
+                        <button id="remove_step_button" class="removeButton" onclick="removeLastStep()"></button>
+                    </div>
+                    <div id="montagemFluxograma" class="montagemFluxograma">
+                    </div>
+                </div>
+            </div>
+            <div class="saida">
+                <div class="saidaArea"></div>
+            </div>
+        </div>
+    <footer>
+    <!-- Inicio Scripts -->
+    <script src="./src/script/drag-and-drop.js"></script>
+    <script src="./src/script/add-remove-button.js"></script>
+    <script src="./src/script/popup-manipulation.js"></script>
+    <!-- Final Scripts-->
+    </footer>
+    </body>
+</html>
