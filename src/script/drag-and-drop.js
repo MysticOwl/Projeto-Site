@@ -40,7 +40,15 @@ function dropThis(i){
             let var_popup = document.getElementById(variavel_popup)
             var_popup.innerHTML =`
                 <a href="#" onclick='popup(${image_id}_popup_${step_id})'>X</a>
-                <h6>${image_id}. Passo ${step_id}</h6>
+                <h4>${image_id}. Passo ${step_id}</h4>
+                <forms>
+                    <div>
+                    <lable for="variavel_nome_${step_id}">Nome da variável:</lable>
+                    <input type="text" id="form_variavel_nome_${step_id}" name="variavel_nome_${step_id}">
+                    <lable for="variavel_valor_${step_id}">Valor: </lable>
+                    <input type="text" id="form_variavel_valor_${step_id}" name="variavel_valor_${step_id}">
+                    </div>
+                </forms>
             `
         break;
         case "input":
@@ -48,7 +56,11 @@ function dropThis(i){
             let in_popup = document.getElementById(input_popup)
             in_popup.innerHTML =`
                 <a href="#" onclick='popup(${image_id}_popup_${step_id})'>X</a>
-                <h6>${image_id}. Passo ${step_id}</h6>
+                <h4>${image_id}. Passo ${step_id}</h4>
+                <div>
+                <p><label for="input_text_${step_id}">Digite seu input:</label></p>
+                <textarea id="input_text_${step_id}" name="input_text_${step_id}" rows="4" cols=40">Digite aqui sua mensagem de input</textarea>
+                </div>
             `
         break;
         case "output":
@@ -56,7 +68,11 @@ function dropThis(i){
             let out_popup = document.getElementById(output_popup)
             out_popup.innerHTML =`
                 <a href="#" onclick='popup(${image_id}_popup_${step_id})'>X</a>
-                <h6>${image_id}. Passo ${step_id}</h6>
+                <h4>${image_id}. Passo ${step_id}</h4>
+                <div>
+                <p><label for="output_text_${step_id}">Digite seu output:</label></p>
+                <textarea id="output_text_${step_id}" name="output_text_${step_id}" rows="4" cols=40">Digite aqui sua mensagem de output</textarea>
+                </div>
             `
         break;
         case "condition":
@@ -64,9 +80,28 @@ function dropThis(i){
             let cond_popup = document.getElementById(condition_popup)
             cond_popup.innerHTML =`
                 <a href="#" onclick='popup(${image_id}_popup_${step_id})'>X</a>
-                <h6>${image_id}. Passo ${step_id}</h6>
+                <h4>${image_id}. Passo ${step_id}</h4>
+                <div>
+                <p><label for="condition_text_${step_id}">Digite sua condição:</label></p>
+                <textarea id="condition_text_${step_id}" name="condition_text_${step_id}" rows="4" cols=40">Digite aqui sua condição</textarea>
+                </div>
             `
         break;
+        case "loop":
+            let loop_popup = `${image_id}_popup_${step_id}`
+            let lp_popup = document.getElementById(loop_popup)
+            lp_popup.innerHTML =`
+                <a href="#" onclick='popup(${image_id}_popup_${step_id})'>X</a>
+                <h4>${image_id}. Passo ${step_id}</h4>
+                <forms>
+                    <div>
+                    <lable for="loop_start_${step_id}">de:</lable>
+                    <input type="text" id="form_loop_start_${step_id}" name="loop_start_${step_id}">
+                    <lable for="loop_end_${step_id}">até: </lable>
+                    <input type="text" id="form_loop_end_${step_id}" name="loop_end_${step_id}">
+                    </div>
+                </forms>
+            `            
         default:
     }
 }
