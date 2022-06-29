@@ -12,19 +12,29 @@ function dropThis(i){
     i.preventDefault();
 
     // variavel para setar o id do intem segurado
-    var imagen_id = i.dataTransfer.getData("item_drag");                
+    let image_id = i.dataTransfer.getData("item_drag");                
     
     // variavel que seta a imagem do item segurado
-    var imagen_src = document.getElementById(imagen_id).src;
+    let image_src = document.getElementById(image_id).src;
     
     // variavel que coleta o id do alvo
-    var step = document.getElementById(i.target.id);    
-    var step_id = step.id
+    let step = document.getElementById(i.target.id);    
+    let step_id = step.id
 
-    var classChange = document.getElementById(step_id)
+    let classChange = document.getElementById(step_id)
     classChange.className = "step"
 
-    step.innerHTML = `<div id="${imagen_id}_passo_${step_id}"><img src="${imagen_src}"> <div class="footerButton"><button id="remove_button_${step_id}" class="removeButton" onclick="removeThisStep(${imagen_id}_passo_${step_id}, ${step_id})"></button></div></div>`
-
-    
+    step.innerHTML = `
+    <div id="${image_id}_passo_${step_id}" ondblclick="popup(${image_id}_popup_${step_id})">
+        <img src="${image_src}">
+        <div class="footerButton">
+            <button id="remove_button_${step_id}" class="removeButton" onclick="removeThisStep(${image_id}_passo_${step_id}, ${step_id})"></button>
+        </div>
+    </div>
+    <div id = "${image_id}_popup_${step_id}" class = "conditionPopup hiddenPopup">
+        <div id = "${image_id}_closePopup_${step_id}">
+            <a href="#" onclick='popup(${image_id}_popup_${step_id})'>X</a>
+            <h6>${image_id}. Passo ${step_id}</h6>
+        </div>
+    </div>`
 }
