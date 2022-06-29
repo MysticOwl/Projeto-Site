@@ -1,15 +1,19 @@
+// Criação do objeto Usuário com nome, e-mail, senha e sugestão a serem pegos no formulário de cadastro
 function Usuario(){
 
   var Nome = "Sem nome";
   var Email = "Sem email";
+  var Senha = "Sem senha";
   var Sugestao = "Sem sugestão";
   this.SetNome = SetNome;
   this.SetEmail = SetEmail;
+  this.SetSenha = SetSenha;
   this.SetSugestao = SetSugestao;  
   this.GetNome = GetNome;
   this.GetEmail = GetEmail;
+  this.GetSenha = GetSenha;
   this.GetSugestao = GetSugestao;
-
+// Funções para definirem nome, e-mail, senha e sugestão passadas pelo usuário
   function SetNome(_nome) {
     Nome = _nome;
   }
@@ -18,10 +22,15 @@ function Usuario(){
       Email = _email;
   }
 
+  function SetSenha(_senha) {
+    Senha = _senha;
+}
+
   function SetSugestao(_sugestao) {
     Sugestao = _sugestao;
   }
 
+// Funções para retornarem as informações passadas pelo usuário para serem manipuladas
   function GetNome(){
     return Nome;
   }
@@ -29,26 +38,32 @@ function Usuario(){
   function GetEmail(){
     return Email;
   }
+
+  function GetSenha(){
+    return Senha;
+  }
   
   function GetSugestao(){
     return Sugestao;
   }
 }
 
+//Função acionada por evento, ao clicar no botão enviar no formulário é iniciada a função
+//para criar o novo objeto e inserir nele os dados passados pelo usuário no cadastro
+document.querySelector('#send').addEventListener('click', function(){
 
-const btn = document.querySelector('#send');
-
-btn.addEventListener('click', function(e){
-  e.preventDefault();
-
-
+//criação de variáveis para armazenar os dados passados no cadastro do usuário
   var nome = document.querySelector('#name').value;
   var email = document.querySelector('#email').value;
+  var senha = document.querySelector('#password').value;
   var sugestao = document.querySelector('#sugestion').value;
 
+//Criação do novo objeto
   var user = new Usuario();
+//Definição das variavés do objeto
   user.SetNome(nome);
   user.SetEmail(email);
+  user.SetSenha(senha);
   user.SetSugestao(sugestao);
 
   if(user.GetNome() != 'Sem nome'){
@@ -65,20 +80,9 @@ btn.addEventListener('click', function(e){
   }else{
     console.log('nop');
   }
+  //Definição das variáveis que ficaram guardadas no cache do navegador
   localStorage.setItem('Conectado', user.GetEmail());
+  localStorage.setItem('Usuario', user.GetNome());
 
   console.log("teste " + localStorage.getItem('Conectado'));
 });
-
-
-
-
-
-
-
-
-
-//console.log(teste);
-//var x = user.GetNome();
-//console.log('x ',x);
-//export {x};

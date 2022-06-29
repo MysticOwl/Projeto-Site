@@ -26,7 +26,7 @@
                                     
                 <li><a href="">Sobre</a></li>
                 <li><a href="">Contatos</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Login</a></li>
             </ul>
         </nav>
         <div class="capa">
@@ -38,28 +38,29 @@
         <br>
         <hr>
 
+
         <section class="forms">
 
-                <form name="cadastro" method="post" action="index.html">
-                    <h2>Cadastro</h2>
-                    Nome completo<br><input type="text" id="name" name="name" required placeholder="Digite seu nome completo" size="40">
+                <form class="paragrafo" name="login" method="get" action="index.html">
+                    <h2>
+                    Bem vindo a área de Login
+                    </h2>
                     <br>
                     Email<br><input type="email" id="email" name="email" required placeholder="Digite seu e-mail" size="40">
                     <br>
                     Senha<br><input type="password" id="password" name="password" required placeholder="*****" size="40">
                     <br>
-                    Sexo<br><input type="radio" name="sexo"  value="masculino">Masculino
-                    <input type="radio" name="sexo" value="feminino">Feminino
-                    <input type="radio" name="sexo" value="outro">Outro
                     <br>
-                    <br>
-                    Quer deixar uma sugestão para melhorar o site?<br><textarea id="sugestion" name="cv" rows="5" cols="50" placeholder="Escreva aqui :)"></textarea><br>
-                    <input type="submit" id="send" class="button">
+                    <input type="submit" id="send" class="button" value="Entrar">
+                    <hr>ou<br>
+                    
                 </form>
+                <a href="register.html">
+                    <input type="submit" id="send" class="button" value="Cadastrar">
+                </a>
         
         </section>
-        <script src="./src/script/objeto.js"></script>
+        <script src="./src/script/login.js"></script>
 
 </body>
 </html>
-        
