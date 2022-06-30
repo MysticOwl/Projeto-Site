@@ -1,4 +1,8 @@
 /*Colunas da interface*/
+.flexDisplay{
+    display: flex;
+}
+
 .main{
     margin: 0.3%;
     width: 98vw;
@@ -65,7 +69,7 @@
     display: flex;
     list-style-type: none;
     flex-direction: column;
-    row-gap: 60px;
+    row-gap: 1.8rem;
 }
 
 .borderOn{
@@ -76,7 +80,6 @@
     padding: 5px;
     min-width: 100px;
     min-height: 100px;
-    max-width: 200px;
     max-height: 200px;
 }
 
@@ -108,23 +111,33 @@
     background-color: darkred;
 }
 
-.conditionPopup{
+.popupDiv{
     visibility: hidden;
+    display: flex;
     width: 350px;
     height: auto;
     margin: 100px auto;
-    background-color: #f2f2f2;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border: 1px solid #666666;
     padding: 15px;
-    text-align: center;
-    border: 3px solid #cccccc;
-    position: absolute;
-    left: 50%;
+    position: fixed;
     top: 100px;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
+}
+
+.popupStyle{
+    align-items: center ;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
+form,input{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    margin-left: 90%;
 }
