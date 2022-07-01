@@ -23,23 +23,19 @@ function dropThis(i){
 
     let classChange = document.getElementById(step_id)
     classChange.className = "step"
-
     if (image_id == "condition"){
         
-        step.innerHTML = `
-        <div id="${image_id}_passo_${step_id}" ondblclick="popup(${image_id}_popup_${step_id})">
-            <img src="${image_src}">
-            <div>
-            <div class="footerButton">
+        step.innerHTML = 
+        `<div id="${image_id}_passo_${step_id}">
+            <img src="${image_src}" ondblclick="popup(${image_id}_popup_${step_id})">
+                <div class="footerButton">
                 <button id="remove_button_${step_id}" class="removeButton" onclick="removeThisStep(${image_id}_passo_${step_id}, ${step_id},${image_id}_popup_${step_id})"></button>
+                </div>
             </div>
-            </div>
-        </div>
-        <div id = "${image_id}_popup_${step_id}" class = "popupDiv popupStyle">
+            <div id = "${image_id}_popup_${step_id}" class = "popupDiv popupStyle">
             <div id = "${image_id}_closePopup_${step_id}">
             </div>
         </div>`
-
     }
     else{
 
@@ -127,4 +123,21 @@ function dropThis(i){
             `            
         default:
     }
+}
+
+
+function dropInCondition(i,step_id){
+    i.preventDefault();
+
+    // variavel para setar o id do intem segurado
+    let image_id = i.dataTransfer.getData("item_drag");                
+    
+    // variavel que seta a imagem do item segurado
+    let image_src = document.getElementById(image_id).src;
+    
+    // variavel que coleta o id do alvo
+
+    let classChange = document.getElementById(step_id)
+    classChange.className = "step"
+    console.log(image_id,image_src,step_id)
 }
