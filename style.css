@@ -1,0 +1,352 @@
+/*Colunas da interface*/
+.main{
+    margin: 0.3%;
+    width: 98vw;
+    height: 98vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /*background-color: darkorange;*/
+}
+.simbolo{
+    margin: 0.5%;
+    /*background-color: chartreuse;*/
+    width: 20%;
+    height: 93%;
+}
+.simboloArea{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 6%;
+    margin: 4.1%;
+    height: 93%;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    row-gap: 20px;
+    overflow: scroll;
+}
+
+.entrada{
+    margin: 0.5%;
+    /*background-color: blue;*/
+    width: 40%;
+    height: 98%;
+}
+.entradaArea{
+    padding: 1%;
+    margin: 2%;
+    height: 93%;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+.saida{
+    margin: 0.5%;
+    /*background-color: yellow;*/
+    width: 40%;
+    height: 98%;
+}
+.saidaArea{
+    padding: 1%;
+    margin: 2%;
+    height: 93%;
+    border: 1px solid black;
+    background-color: whitesmoke;
+}
+/*Estilo entrada Fluxograma*/
+
+
+.montagemFluxograma{
+    margin-top: 2%;
+    padding: 1%;
+    align-items: center;
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    row-gap: 60px;
+}
+
+.borderOn{
+    border: 1px solid black;
+}
+
+.step{
+    padding: 5px;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.buttons{
+    position: fixed;
+}
+
+.addButton{
+    width: 20px;
+    height: 7px;
+    border-radius: 5%;
+    background-color: greenyellow;
+    border: 1px solid green;
+    transition-duration: 0.4s;
+}
+.addButton:hover{
+    background-color: green;
+}
+.removeButton{
+    width: 20px;
+    height: 7px;
+    border-radius: 5%;
+    background-color: red;
+    border: 1px solid darkred;
+    margin-left: 3px;
+    transition-duration: 0.4s;
+}
+.removeButton:hover{
+    background-color: darkred;
+}
+
+.conditionPopup{
+    visibility: hidden;
+    width: 350px;
+    height: auto;
+    margin: 100px auto;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border: 1px solid #666666;
+    padding: 15px;
+    text-align: center;
+    border: 3px solid #cccccc;
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+/*raphael últimas alterações*/
+body {
+    background-color: #bce7f7;
+}
+
+hr {
+	height:1px;
+	border-width:0;
+    background-image:
+        linear-gradient(to right, #e5ebed, #01080b);
+	}
+
+nav{
+    background-image:
+        linear-gradient(to right, #58caf3, #0e6889);
+    position: absolute;
+    right: 0%;
+    left: 0%;
+    top: 0%;
+}
+
+nav ul li{
+   position: relative;
+   display: inline;
+}
+
+nav ul li a{
+    color: rgb(255, 255, 255);
+    /*padding: 10px;*/
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    background-color: #96d4eb;
+}
+
+nav ul ul{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 18px;
+}
+
+nav ul ul li a{
+    display: block;
+}
+
+nav ul li:hover ul{
+    display: inline-block;
+}
+
+/*header{
+    margin-left: 10%;
+    display: inline-block;
+}
+*/
+.forms{
+    position: absolute;
+    width: 1000px;
+    background-image:
+        linear-gradient(to right, #58caf3, #0e6889);
+    top: 20em;
+    left: 10em;
+    border-radius: 0.6rem;
+    text-align: center;
+    font-family:fantasy;
+}
+
+.paragrafo{
+    color:black;
+    margin: 10px;
+    margin-left: 30px;
+    margin-right: 35px;
+}
+
+.capa{
+    position: relative;
+    top: 4em;   
+}
+
+.button {
+    background-image:
+        linear-gradient(to right, #58caf3, #0e6889);
+    border: 1px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 0.6rem;
+}
+/* Bryan alterando Css 
+background-color: rgb(10 203 139)*/
+
+body {
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+.container {
+    display: flex;
+    align-content: space-between;
+    gap: 10px;
+    gap: 10px 20px; /* row-gap column gap */
+    row-gap: 10px;
+    column-gap: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /*overflow: hidden;*/
+    background-color: rgb(44, 44, 44);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.loginstyle {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding-right: 0;
+    padding-left: 0;
+    display: block;
+    padding: 0.8rem 1rem;
+    color: #fff;
+    background-color: rgb(10 203 139);
+    border-color: rgb(10 203 139);
+    min-width: 60px;
+    font-family: inherit;
+    font-size: inherit;
+}
+.botonstyle {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding-right: 0;
+    padding-left: 0;
+    display: block;
+    padding: 0.8rem 1rem;
+    color: #fff;
+    background-color: rgb(10 203 139);
+    border-color: rgb(10 203 139);
+    min-width: 60px;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: 20px;
+}
+/* SOBRE */
+.sobrestyle {
+    /*background-color: #f1fafb;*/
+    padding: 60px 10px;
+    display: block;
+    box-sizing: border-box;    
+}
+
+.janelas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    background: #fff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0;
+    margin: 30px 0;
+    align-items: center;
+}
+.colunas {
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+  }
+h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.col-1 {
+    flex: 0 0 33.33333%;
+    
+}

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Document</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /*background: #7159c1;*/
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+            "h h"
+            "m m"
+            "m m"
+            "m m"
+            "m m"
+            "m m"
+            "a a"
+            "f f";
+        }
+
+        header {
+            /*background: yellow;*/
+            height: 100%;
+            grid-area: h;
+
+            /*
+            grid-column: 1/3;
+            grid-row:1/2;
+            */
+
+            /*
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start:1;
+            grid-row-end:2;
+            */
+        }
+
+        main {
+            /*background: blue;*/
+            height: 100%;
+
+            grid-area: m;
+        }
+
+        aside {
+            /*background: green;*/
+            height: 100%;
+
+            grid-area: a;
+        }
+
+        footer {
+            /*background: red;*/
+            height: 100%;
+            position: relative;
+            bottom: 0;
+            grid-area: f;
+        }
+
+        .containerflx {
+            margin:0 auto;
+            display: flex;
+            flex-wrap: wrap; 
+        }
+        
+        .divisoria{
+            height: 400px;
+            width: 100%;
+            background-color: rgb(10 203 139);
+            justify-content: center;
+            align-items: center;
+            align-content: space-around;
+            }
+        
+        .divisoriaferramentas{
+            height: 600px;
+            width: 100%;
+            background-color: rgb(10 203 139);
+
+            align-items: center;
+            align-content: space-around;
+
+            }
+
+        .divferramentas{
+            height: 300px;
+            width: 80%;
+            /*background-color: #474747;*/
+            padding: 5px;
+            margin: 5%;
+
+            justify-content: center;
+            align-items: center;
+            align-content: space-around;
+
+            }
+        
+        .divisoriatexto{
+            height: 300px;
+            width: 500px;
+            /*background-color: #19192e;*/
+            padding: 5px;
+            margin: 50px;
+            
+            align-items: center;
+            align-content: space-around;
+
+            }
+
+        .imgs{
+            height: 300px;
+            width: 225px;
+            /*background-color: #19192e;*/
+            padding: 5px;
+            margin: 10px;
+            
+            align-items: center;
+            align-content: space-around;
+
+            }
+        
+        .itensferramentas{
+            height: 150px;
+            width: 200px;
+            /*background-color: #19192e;*/
+            padding: 5px;
+            margin: 10px;
+            
+            align-items: center;
+            align-content: space-around;
+            justify-content: center;
+            }
+            
+
+        .titulos{
+            height: 25px;
+            width: 200px;
+            /*background-color: #ffffff;*/
+            padding: 50px;
+            margin: 5px;
+            
+            align-self: flex-start;
+            align-content: space-around;
+        }
+
+        .focotexto{
+            height: 100px;
+            width: 225px;
+            /*background-color: #e5e5e7;*/
+            padding: 5px;
+            margin: 10px;
+            
+            align-items: center;
+            align-content: space-around;
+        }
+
+        .textoscontatos{
+            height: 100px;
+            width: 400px;
+            /*background-color: #2f2f38;*/
+            padding: 5px;
+            margin: 5px;
+
+            align-items: center;
+            align-content: space-around;
+        }
+
+        .item0{
+            height: 500px;
+            width: 80%;
+            /*background-color: #000000;*/
+            padding: 50px;
+            margin: 5%;
+
+            /*justify-content: center;*/
+            align-items: center;
+            align-content: space-around;
+
+            }
+
+        .item1{
+            height: 490px;
+            width: 500px;
+            /*background-color: #19192e;*/
+            padding: 5px;
+            margin: 5px;
+            
+            align-items: center;
+            align-content: space-around;
+
+            }
+            
+        .item2{
+            height: 100px;
+            width: 400px;
+            /*background-color: #2f2f38;*/
+            padding: 5px;
+            margin: 5px;
+
+            align-items: center;
+            align-content: space-around;
+        }
+            
+        .item3{
+            height: 50px;
+            width: 300px;
+            /*background-color: #6c6c7c;*/
+            padding: 5px;
+            margin: 5px;
+
+            align-items: center;
+            align-content: space-around;
+        }
+        .item4{
+            height: 25px;
+            width: 200px;
+            /*background-color: #ffffff;*/
+            padding: 5px;
+            margin: 5px;
+            
+            align-items: center;
+            align-content: space-around;
+        }
+        .item5{
+            height: 10px;
+            width: 100px;
+            /*background-color: #02cafc;*/
+            padding: 5px;
+            margin: 5px;
+            
+            align-items: center;
+            align-content: space-around;
+        }
+
+        div.body-content{
+        
+        margin-top: 40px;
+        }
+
+        header.fixar-rodape{
+        border-top: 1px solid #333;
+        top: 0;
+        left: 0;
+        height: 40px;
+        position: fixed;
+        width: 100%;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="fixar-rodape">
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="">Base de Conhecimento</a>
+                    <ul>
+                        <li><a href="https://wiki.python.org/moin/BeginnersGuide" target="_blank"><img src="./src/python.png" alt="python icon"> Python</a></li>
+                        <li><a href="https://dev.java/learn/getting-started-with-java/" target="_blank"><img src="./src/java.png" alt="java icon"> Java</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Conversor</a>
+                        <ul>
+                            <li><a href="python.html"><img src="./src/python.png" alt="python icon"> Python</a></li>
+                            <li><a href="java.html"><img src="./src/java.png" alt="java icon"> Java</a></li>
+                        </ul>
+                </li>
+                                    
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#ferramentas">Ferramentas</a></li>
+                <li><a href="#comentarios">Comentarios</a></li>
+                <li><a href="#contatos">Contatos</a></li>
+                <li style="float:right">
+                    <a class="loginstyle" href="login.html">Login</a>
+                </li>
+            </ul>
+        </nav>
+
+      </header>
+      <main>
+        <!-- home -->
+        <section class="section" id="home">
+        <div class="row item0 containerflx">
+            <div class="col-xs item1 containerflx">
+                <div class="box item2 containerflx">
+                    <h1 class="h4">Incredible Converter Code.</h1>
+                </div>
+                <div class="box item2 containerflx">
+                    <h2 class="p">Um Projeto de desenvolvimento Web de um conversor de código em fluxograma.</h2>
+                </div>
+                <div class="box item2 containerflx">
+                    <div class="col-xs item4 containerflx">
+                        <a class="botonstyle" href="login.html">Comece agora!</a>
+                    </div>
+                </div>
+                <div class="box item2 containerflx">
+                    <div class="box item5 containerflx">Rápido e Seguro</div>
+                    <div class="box item5 containerflx">Flexível e Simples</div>
+                    <div class="box item5 containerflx">Ambiente Colaborativo</div>
+                </div>
+            </div>
+            <div class="col-xs item1 containerflx">
+                IMAGEM NAO COLOCADA
+            </div>
+        </div>
+        </section>
+        <!-- Sobre -->
+        <section class="section" id="sobre">
+        <div class="row divisoria containerflx">
+            <div class="col-xs divisoriatexto containerflx">
+                <h1 class="h4">Coversor de Fluxogramas utilizando SVG</h1>
+            </div>
+            <div class="col-xs divisoriatexto containerflx">
+                <p class="p">Até o momento foi criada a área de ações para o usuário, layout em que a site será construído e em CSS foram inseridas as formas de execução. Estamos realizando agora a implementação do método SVG para melhor manipulação das formas e imagens..</p>
+            </div>
+        </div>
+        </section>
+        <!-- Focos -->
+        <div class="col-xs titulos containerflx">
+            <h1 class="h4">Qual o Foco?</h1>
+            <p class="p">TEXTO SOBRE FOCO DO PROJETO</p>
+        </div>
+        <div class="row item0 containerflx">
+
+            <div class="col-xs imgs containerflx">
+                IMAGEM NAO COLOCADA 226x300
+            </div>
+            <div class="col-xs imgs containerflx">
+                IMAGEM NAO COLOCADA 226x300
+            </div>
+            <div class="col-xs imgs containerflx">
+                IMAGEM NAO COLOCADA 226x300
+            </div>
+            <div class="col-xs imgs containerflx">
+                IMAGEM NAO COLOCADA 226x300
+            </div>
+                <div class="row focotexto containerflx">
+                    <h4 class="h4">Caract. 1</h4>
+                    <p class="p">Um paragrafo falando de alguma facilidade ou característica do projeto, ou recursos.</p>
+                </div>
+                <div class="box focotexto containerflx">
+                    <h4 class="h4">Caract. 2</h4>
+                    <p class="p">Um paragrafo falando de alguma facilidade ou característica do projeto, ou recursos.</p>
+                </div>
+                <div class="box focotexto containerflx">
+                    <h4 class="h4">Caract. 3</h4>
+                    <p class="p">Um paragrafo falando de alguma facilidade ou característica do projeto, ou recursos.</p>
+                </div>
+                <div class="box focotexto containerflx">
+                    <h4 class="h4">Caract. 4</h4>
+                    <p class="p">Um paragrafo falando de alguma facilidade ou característica do projeto, ou recursos.</p>
+                </div>
+            
+        </div>
+            <!-- Ferramentas -->
+            <section class="section" id="ferramentas">
+            <div class="row divisoriaferramentas containerflx">
+                <div class="box titulos containerflx">
+                    <h4 class="h4">As Ferramentas Utilizadas no Projeto</h4>
+                    <p class="p">Breve comentario sobre as ferramentas</p>
+                </div>
+                <div class="row divferramentas containerflx">
+                    <div class="box itensferramentas containerflx">
+                        ICONE FERRAMENTAS
+                    </div>
+                    <div class="box itensferramentas containerflx">
+                        ICONE FERRAMENTAS
+                    </div>
+                    <div class="box itensferramentas containerflx">
+                        ICONE FERRAMENTAS
+                    </div>
+                    <div class="box itensferramentas containerflx">
+                        ICONE FERRAMENTAS
+                    </div>
+                    <div class="box itensferramentas containerflx">
+                        ICONE FERRAMENTAS
+                    </div>
+                    <div class="box itensferramentas containerflx">
+                        ICONE FERRAMENTAS
+                    </div>
+                    <div class="box itensferramentas containerflx">
+                        ICONE FERRAMENTAS
+                    </div>
+                    <div class="box itensferramentas containerflx">
+                        ICONE FERRAMENTAS
+                    </div>
+                </div>
+            </div>
+            </section>
+        <!-- Comentarios -->
+        <section class="section" id="comentarios">
+        <div class="row item0 containerflx">
+            <div class="col-xs titulos containerflx">
+                <h1 class="h4">Comentários do Povão</h1>
+            </div>
+            <div class="row divferramentas containerflx">
+                <div class="col-xs imgs containerflx">
+                    <p class="p">Uma Plataforma muito FODA! curti dms</p>
+                    <h4 class="h4">Bryan Fardin</h4>
+                    <h6>Full Stack developer</h6>
+                </div>
+                <div class="col-xs imgs containerflx">
+                    <p class="p"Passei Mt perrengue para no final raphael quebrar em 2 cliques.</p>
+                    <h4 class="h4">Thiago Copello</h4>
+                    <h6>Full Stack developer</h6>
+                </div>
+                <div class="col-xs imgs containerflx">
+                    <p class="p">Vim visitar o site do copello e quebro em 2 cliques essa merda.</p>
+                    <h4 class="h4">Raphael</h4>
+                    <h6>Carinha do Atendimento</h6>
+                </div>
+            </div>
+        </div>
+        </section>
+    <!--<div class="row item0 containerflx">
+            <div class="col-xs item1 containerflx">
+                <div class="box item2 containerflx">
+                    <div class="row item3 containerflx">
+                        <div class="col-xs item4 containerflx">
+                            <div class="box item5 containerflx">auto</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    -->
+      </main>
+      <aside></aside>
+      <footer>
+                <!-- Contatos -->
+                <section class="section" id="contatos">
+                <div class="row divisoria containerflx">
+                    <div class="col-xs imgs containerflx">
+                        <div class="col-xs item4 containerflx">
+                            
+                        </div>
+                        <div class="box item5 containerflx">
+                            <p class="h3"> Thiago Copello</p></div>
+                        <div class="box item5 containerflx">
+                            <p class="h3"> Bryan Fardin</p></div>
+                        <div class="box item5 containerflx">
+                            <p class="h3"> Raphael Goulart</p></div>
+                    </div>
+                    <div class="col-xs imgs containerflx">
+                        <div class="col-xs item4 containerflx">
+                            
+                        </div>
+                        <div class="box item5 containerflx">
+                            <p class="h3">123456</p></div>
+                        <div class="box item5 containerflx">
+                            <p class="h3">134535</p></div>
+                        <div class="box item5 containerflx">
+                            <p class="h3">123456</p></div>
+                    </div>
+                    <div class="col-xs imgs containerflx">
+                        <div class="col-xs item4 containerflx">
+                            
+                        </div>
+                        <div class="box item5 containerflx">
+                            <p class="h3"> https://github.com/MysticOwl</p></div>
+                        <div class="box item5 containerflx">
+                            <p class="h3"> https://github.com/BryanFardin</p></div>
+                        <div class="box item5 containerflx">
+                            <p class="h3"> https://github.com/raphasg-rp</p></div>
+                    </div>
+                </div>
+                </section>
+      </footer>
+    </div>
+  </body>
+</html>
