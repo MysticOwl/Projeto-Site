@@ -1,6 +1,7 @@
 /*Colunas da interface*/
 .flexDisplay{
     display: flex;
+    gap: 15px;
 }
 
 .main{
@@ -74,6 +75,8 @@
 
 .borderOn{
     border: 1px solid black;
+    height: 100px;
+    width: 100px;
 }
 
 .step{
@@ -133,10 +136,12 @@
     flex-direction: column;
     background-color: whitesmoke;
 }
-form,input{
+
+.inputForm{
     width: 100%;
 }
-a{
+
+.formA{
     text-decoration: none;
     margin-left: 90%;
 }
