@@ -27,19 +27,19 @@ function dropThis(i){
     if (image_id == "condition"){
         
         step.innerHTML = 
-        `<div id="${step_id}_${image_id}">
+        `<div id="${step_id}_${image_id}" class="flexDisplay insideStep">
             <img src="${image_src}" ondblclick="popup(${step_id}_${image_id}_popup)">
                 <div class="footerButton"><button id="remove_button_${step_id}" class="removeButton" onclick="removeThisStep(${step_id}_${image_id},${step_id})"></button></div>
             <div id = "${step_id}_${image_id}_popup" class = "popupDiv popupStyle"></div>
             <div id = "${image_id}_closePopup_${step_id}"></div>
             <div class="flexDisplay">
 
-                <div id="${step_id}_${image_id}_true" class="step borderOn"></div>
+                <div id="${step_id}_${image_id}_true" class="step borderOn"><span>If</span></div>
                     <div id = "${step_id}_${image_id}_popup_true" class = "popupDiv popupStyle"></div>
                     <div id = "${image_id}_closePopup_${step_id}"></div>   
-                <div id="${step_id}_${image_id}_false" class="step borderOn"></div>
-                <div id = "${step_id}_${image_id}_popup_false" class = "popupDiv popupStyle"></div>
-                <div id = "${image_id}_closePopup_${step_id}"></div>
+                <div id="${step_id}_${image_id}_false" class="step borderOn"><span>Else</span></div>
+                    <div id = "${step_id}_${image_id}_popup_false" class = "popupDiv popupStyle"></div>
+                    <div id = "${image_id}_closePopup_${step_id}"></div>
         
             </div>
         </div>`
@@ -62,7 +62,7 @@ function dropThis(i){
             let var_popup = document.getElementById(variavel_popup)
             var_popup.innerHTML =`
                 <a class="formA" href="#" onclick='popup(${step_id}_${image_id}_popup)'>x</a>
-                <h4>${image_id}. ${step_id}</h4>
+                <h4>Atributos-${image_id}.</h4>
                 <forms>
                     <div>
                     <lable for="variavel_nome_${step_id}">Nome da variável:</lable>
@@ -78,7 +78,7 @@ function dropThis(i){
             let in_popup = document.getElementById(input_popup)
             in_popup.innerHTML =`
                 <a class="formA" href="#" onclick='popup(${step_id}_${image_id}_popup)'>x</a>
-                <h4>${image_id}. ${step_id}</h4>
+                <h4>Atributos-${image_id}.</h4>
                 <div>
                 <p><label for="input_text_${step_id}">Digite seu input:</label></p>
                 <textarea id="input_text_${step_id}" name="input_text_${step_id}" rows="4" cols=40" placeholder="Digite aqui sua mensagem de input"></textarea>
@@ -90,7 +90,7 @@ function dropThis(i){
             let out_popup = document.getElementById(output_popup)
             out_popup.innerHTML =`
                 <a class="formA" href="#" onclick='popup(${step_id}_${image_id}_popup)'>x</a>
-                <h4>${image_id}. ${step_id}</h4>
+                <h4>Atributos-${image_id}.</h4>
                 <div>
                 <p><label for="output_text_${step_id}">Digite seu output:</label></p>
                 <textarea id="output_text_${step_id}" name="output_text_${step_id}" rows="4" cols=40" placeholder="Digite aqui sua mensagem de output"></textarea>
@@ -102,7 +102,7 @@ function dropThis(i){
             let cond_popup = document.getElementById(condition_popup)
             cond_popup.innerHTML =`
                 <a class="" href="#" onclick='popup(${step_id}_${image_id}_popup)'>x</a>
-                <h4>${image_id}. ${step_id}</h4>
+                <h4>Atributos-${image_id}.</h4>
                 <div>
                 <p><label for="condition_text_${step_id}">Digite sua condição:</label></p>
                 <textarea id="condition_text_${step_id}" name="condition_text_${step_id}" rows="4" cols=40" placeholder="Digite aqui sua condição"></textarea>
@@ -114,7 +114,7 @@ function dropThis(i){
             let lp_popup = document.getElementById(loop_popup)
             lp_popup.innerHTML =`
                 <a class="formA" href="#" onclick='popup(${step_id}_${image_id}_popup)'>x</a>
-                <h4>${image_id}. ${step_id}</h4>
+                <h4>Atributos-${image_id}.</h4>
                 <forms>
                     <div>
                     <lable for="loop_start_${step_id}">de:</lable>

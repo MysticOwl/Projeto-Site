@@ -2,7 +2,7 @@ var cont_steps = []
 
 function creatNextStep(){
     let divStep = document.getElementById("montagemFluxograma");
-    cont_steps.push(`passo_${cont_steps.length}`)
+    cont_steps.push(`passo_${cont_steps.length+1}`)
     divStep.innerHTML += `<div id=passo_${cont_steps.length} class="step borderOn" ondrop="dropThis(event)" ondragover="allowDropThis(event)"></div>`
 }
 
