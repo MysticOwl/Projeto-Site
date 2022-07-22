@@ -41,33 +41,31 @@ function constructorPopUp(struct,step){ //Função que constroi a seção do pop
     switch(struct){
         case "variavel":
             step.innerHTML +=`
-                <forms>
-                    <div>
+                <div>
                     <lable for="${struct}_nome_${(step).id}">Nome:</lable>
                     <input class="inputForm" type="text" id="form_${struct}_nome_${(step).id}" name="${struct}_nome_${(step).id}">
                     <lable for="${struct}_valor_${(step).id}">Valor:</lable>
                     <input class="inputForm" type="text" id="form_${struct}_valor_${(step).id}" name="${struct}_valor_${(step).id}">
-                    </div>
-                </forms>    
+                </div>
             `
             break
         case "loop":
             step.innerHTML +=`
-            <forms>
                 <div>
-                <lable for="start_${(step).id}">de:</lable>
-                <input class="inputForm" type="number" id="form_start_${(step).id}" name="start_${(step).id}">
-                <lable for="end_${(step).id}">até: </lable>
-                <input class="inputForm" type="number" id="form_end_${(step).id}" name="end_${(step).id}">
+                    <p><label for="${struct}_enquanto_${(step).id}">Enquanto:</label></p>
+                    <textarea id="${struct}_enquanto_${(step).id}" name="${struct}_enquanto_${(step).id}" rows="4" cols=40" placeholder="Digite aqui sua condição: var1 < var2"></textarea>
+
+                    <p><label for="${struct}_faca_${(step).id}">Faça:</label></p>
+                    <textarea id="${struct}_faca_${(step).id}" name="${struct}_faca_${(step).id}" rows="4" cols=40" placeholder="Digite aqui sua condição: var2 = var2 + 1"></textarea>
                 </div>
-            </forms>
             `
             break
         default:
             step.innerHTML +=`
-            <p><label for="${struct}_text_${(step).id}">Digite sua condição:</label></p>
-            <textarea id="${struct}_text_${(step).id}" name="${struct}_text_${(step).id}" rows="4" cols=40" placeholder="Digite aqui sua condição"></textarea>
-            </div>
-        `
+                <div>
+                    <p><label for="${struct}_text_${(step).id}">Digite sua condição:</label></p>
+                    <textarea id="${struct}_text_${(step).id}" name="${struct}_text_${(step).id}" rows="4" cols=40" placeholder="Digite aqui sua condição"></textarea>
+                </div>
+            `
     }
 }

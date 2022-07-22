@@ -23,13 +23,15 @@
                     <div class="buttons">
                         <button id="add_step_button" class="addButton" onclick="creatNextStep()"></button>
                         <button id="remove_step_button" class="removeButton" onclick="removeLastStep()"></button>
+                        <button id="output_code_button" onclick="getCode()"></button>
                     </div>
                     <div id="montagemFluxograma" class="montagemFluxograma">
                     </div>
                 </div>
             </div>
             <div class="saida">
-                <div class="saidaArea"></div>
+                <div id="saida" class="saidaArea">
+                </div>
             </div>
         </div>
     <footer>
@@ -38,6 +40,7 @@
     <script src="./src/script/add-remove-button.js"></script>
     <script src="./src/script/popup-manipulation.js"></script>
     <script src="./src/script/constructor.js"></script>
+    <script src="./src/script/outputCode.js"></script>
     <!-- Final Scripts-->
     </footer>
     </body>
