@@ -19,6 +19,7 @@ function dropThis(i){
     //Variável resonsável por modular a classe do elemento step
     let classChange = document.getElementById(step_id)
     classChange.className = "step"
+
     //Função construtora
     constructor(i.dataTransfer.getData("item_drag"),
                 document.getElementById(image_id).src,

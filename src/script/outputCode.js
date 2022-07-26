@@ -29,4 +29,6 @@ function outputCode(){ //Transforma as informações do banco em output
             </div>
         `
     }
+    let div = document.getElementById('passo_1')
+    console.log(div)    
 }
